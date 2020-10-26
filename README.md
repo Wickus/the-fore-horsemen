@@ -7,34 +7,34 @@ The website will be built using React js or alternativly vanila JavaScript + JQu
 
 ## Requirements
 
-**Home Page*
-**Gallery*
-**Leader Boards*
-**Players*
-**Live Scores*
-**PGA Leaderboards*
-**PMG Booking*
-**Player Login*
-**Social Media*
+* *Home Page*
+* *Gallery*
+* *Leader Boards*
+* *Players*
+* *Live Scores*
+* *PGA Leaderboards*
+* *PMG Booking*
+* *Player Login*
+* *Social Media*
 
 ## Languages That Will Be Used
 
 *Front End*
-*React JS / Vanila JavaScript + jQuery
-*HTML 5
-*CSS 3
+* React JS / Vanila JavaScript + jQuery
+* HTML 5
+* CSS 3
 
 *Back End*
-*PHP
-*MySQL
+* PHP
+* MySQL
 
 ## Home page
 
 The home page will have:
 
-*Navigation
-*Last event results
-*couple of images of the last event
-*Image devider with motivational quotes (Random genirated)
-*Current leader board for the masters.
-*Footer containing the sitemap, contact details & social media
+* Navigation
+* Last event results
+* couple of images of the last event
+* Image devider with motivational quotes (Random genirated)
+* Current leader board for the masters.
+* Footer containing the sitemap, contact details & social media
