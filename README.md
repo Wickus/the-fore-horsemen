@@ -20,13 +20,13 @@ The website will be built using React js or alternativly vanila JavaScript + JQu
 ## Languages That Will Be Used
 
 *Front End*
-React JS / Vanila JavaScript + jQuery
-HTML 5
-CSS 3
+-React JS / Vanila JavaScript + jQuery
+-HTML 5
+-CSS 3
 
 *Back End*
-PHP
-MySQL
+-PHP
+-MySQL
 
 ## Home page
 
