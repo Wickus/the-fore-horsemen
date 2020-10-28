@@ -2,9 +2,6 @@
 
 This website will showcase all the fore horsemen events, leaderboards and funtime videos and photos. There will be live scoring and also a quick look at the PGA standings and a quick way to book through PMG.
 
-Front End
-The website will be built using React js or alternativly vanila JavaScript + JQuery
-
 ## Requirements
 
 * *Home Page*
@@ -27,6 +24,7 @@ The website will be built using React js or alternativly vanila JavaScript + JQu
 *Back End*
 * PHP
 * MySQL
+* FireBase
 
 ## Home page
 
