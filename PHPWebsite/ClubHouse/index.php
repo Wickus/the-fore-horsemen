@@ -7,6 +7,6 @@ $page_title = "Club House"
 	<?php include($_SERVER["DOCUMENT_ROOT"] . "/Common/Header.php") ?>
 	</head>
 	<body>
-		<?php include($_SERVER["DOCUMENT_ROOT"] . "/Components/Navigation/index.php") ?>
+		<?php include($_SERVER["DOCUMENT_ROOT"] . "/Components/WebsiteHeader/index.php") ?>
 	</body>
 </html>

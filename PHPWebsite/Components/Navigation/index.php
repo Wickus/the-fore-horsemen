@@ -11,8 +11,8 @@
 	<div class="navigation-links-wrapper">
 		<nav>
 			<ul>
-				<li><a href="#"><label>Club House</label></a></li>
-				<li><a href="#"><label>Gellery</label></a></li>
+				<li><a href="#"><i class="fas fa-home fa-lg"></i> <label>Club House</label></a></li>
+				<li><a href="#"><i class="far fa-images fa-lg"></i> <label>Gellery</label></a></li>
 			</ul>
 		</nav>
 	</div>
