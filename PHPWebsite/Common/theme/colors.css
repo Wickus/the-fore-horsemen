@@ -24,32 +24,32 @@ ul {
 	margin: 0px;
 }
 
-.color-primary,
-.color-primary-hover:hover,
-.color-primary-active  {
+.background-color-primary,
+.background-color-primary-hover:hover,
+.background-color-primary-active  {
 	background-color: #004d40;
 	color:#ffffff;
 	transition: color, background-color 0.4s ease;
 }
 
-.color-secondary,
-.color-secondary-hover:hover,
-.color-secondary-active {
+.background-color-secondary,
+.background-color-secondary-hover:hover,
+.background-color-secondary-active {
 	background-color: #009688;
 	color: #ffffff;
 }
 
-.color-accent {
+.background-color-accent {
 	background-color: #3949ab;
 	color:#ffffff;
 }
 
-.color-default {
+.background-color-default {
 	background-color: #ffffff;
 	color: #272727;
 }
 
-.color-default-accent {
+.background-color-default-accent {
 	color: #c2c2c2;
 	background-color: #272727;
 }
@@ -58,9 +58,25 @@ table th, table td {
 	border-color: #dbdbdb;
 }
 
-a, i {
+.color-primary {
+	color: #004d40;
+}
+
+.color-secondary {
 	color: #009688;
 }
+
+.color-accent {
+	color: #3949ab;
+}
+
+.color-defualt {
+	color:#272727;
+} 
+
+.color-defualt-accent {
+	color:#fff;
+} 
 
 i.gold {
 	color:gold;

@@ -1,10 +1,13 @@
 .navigation-wrapper {
+	position: fixed;
+	top:0px;
+	left:0px;
 	width: 100%;
 	height: 64px;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	border-bottom: 1px solid lightgrey;
+	z-index: 1;
 }
 
 .mobile-nav-trigger-wrapper {
@@ -30,7 +33,11 @@
 }
 
 .navigation-extras a {
-	margin: 0px 4px;
+	margin: 0px 6px;
+}
+
+.navigation-links-wrapper {
+	background-color: inherit;
 }
 
 .navigation-links-wrapper li i {
@@ -42,6 +49,10 @@
 }
 
 @media (min-width:300px) and (max-width:1230px) {
+	.navigation-wrapper {
+		border-bottom: 1px solid lightgrey;
+	}
+	
 	.navigation-links-wrapper {
 		display: none;
 		position: fixed;
@@ -80,6 +91,10 @@
 
 	.logo-wrapper {
 		margin: 0px 20px;
+	}
+
+	.navigation-wrapper:not(.mobile-navigation) .logo-wrapper img {
+		height: 160px;
 	}
 
 	.navigation-links-wrapper nav ul {
