@@ -35,6 +35,19 @@
 .header-content {
 	position: relative;
 	z-index: 1;
+	letter-spacing: 6px;
+}
+
+.header-content h1 {
+	letter-spacing: 8px;
+}
+
+span.scroll-icon {
+	position: absolute;
+	left:50%;
+	bottom:40px;
+	transform: translate(-50%, 0px);
+	display: inline-block;
 }
 
 @media (min-width:300px) {
@@ -42,20 +55,82 @@
 		width:100%;
 		height: 100%;
 	}
+
+	.header-content h1 {
+		font-size: 50px;
+	}
+
+	span.scroll-icon {
+		width: 40px;
+		height: 40px;
+		border-radius: 20px;
+		border:2px solid #fff;
+		animation: mobile-scroll 2s infinite ease;
+	}
 }
 
 @media (min-width:700px) {
 	.website-header {
-		text-align: right;
-		align-items: flex-end;
 		background-position: center;
 	}
 
 	.header-content {
 		margin-right: 40px;
 	}
+
+	.header-content h1 {
+		font-size: 80px;
+	}
 }
 
 @media (min-width:1230px) {
+	span.scroll-icon {
+		width: 40px;
+		height: 60px;
+		border-radius: 30px;
+		border:2px solid #fff;
+		animation: none;
+	}
 	
+	span.scroll-icon:after {
+		content:'';
+		position: absolute;
+		left:50%;
+		top:10px;
+		width: 4px;
+		height: 10px;
+		border-radius: 2px;
+		background-color: #fff;
+		transform: translate(-50%,0px);
+		animation: scroll 2s infinite ease;
+	}
+}
+
+@keyframes scroll {
+	from{
+		top:10px;
+		opacity: 1;
+	}
+	to{
+		top:30px;
+		opacity: 0;
+	}
+}
+
+@keyframes mobile-scroll {
+	0%{
+		bottom:40px;
+		opacity: 1;
+		height: 40px;
+	}
+	50%{
+		bottom:50px;
+		opacity: 0.5;
+		height: 60px;
+	}
+	100%{
+		bottom:60px;
+		opacity: 0;
+		height: 40px;
+	}
 }
