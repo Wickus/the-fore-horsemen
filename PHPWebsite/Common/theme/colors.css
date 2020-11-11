@@ -27,7 +27,7 @@ ul {
 .background-color-primary,
 .background-color-primary-hover:hover,
 .background-color-primary-active  {
-	background-color: #004d40;
+	background-color: #006833;
 	color:#ffffff;
 	transition: color, background-color 0.4s ease;
 }
@@ -35,7 +35,7 @@ ul {
 .background-color-secondary,
 .background-color-secondary-hover:hover,
 .background-color-secondary-active {
-	background-color: #009688;
+	background-color: #00966f;
 	color: #ffffff;
 }
 
@@ -59,11 +59,11 @@ table th, table td {
 }
 
 .color-primary {
-	color: #004d40;
+	color: #006833;
 }
 
 .color-secondary {
-	color: #009688;
+	color: #00966f;
 }
 
 .color-accent {
@@ -107,7 +107,7 @@ footer h3 span {
 
 .input input:focus ~ label ,
 .input input:valid ~ label {
-	color:#009688;
+	color:#00966f;
 }
 
 .input input:focus ~ label:after,

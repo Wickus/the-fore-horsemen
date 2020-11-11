@@ -1,8 +1,5 @@
 .website-header {
 	position: relative;
-	background-image: url(/Resources/Backgrounds/website-header.jpg);
-	background-size: cover;
-	background-position: top;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
