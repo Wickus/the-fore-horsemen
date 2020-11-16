@@ -1,9 +1,6 @@
 <?php
-$mobileNavigationClasses = ""; 
-$websiteLogoPath = "/Resources/logo/logo-white.png";
-$navigationLinkClasses = "color-defualt-accent"; 
 if(userDevice() == "tablet" || userDevice() == "mobile"){
-	$mobileNavigationClasses = "mobile-navigation background-color-default";
+	$mobileNavigationClasses = "mobile-navigation background-color-default ";
 	$websiteLogoPath = "/Resources/logo/logo-black.png";
 	$navigationLinkClasses = "color-secondary";
 }
@@ -17,13 +14,13 @@ if(userDevice() == "tablet" || userDevice() == "mobile"){
 		<a role="button" href="#" onclick="openCloseNavigation(this)"><i class="fas fa-bars fa-2x color-secondary"></i></a>
 	</div>
 	<div class="logo-wrapper">
-		<img src="<?php echo $websiteLogoPath ?>" alt="Website Logo">
+		<a href="/"><img src="<?php echo $websiteLogoPath ?>" alt="Website Logo"></a>
 	</div>
 	<div class="navigation-links-wrapper">
 		<nav>
 			<ul>
-				<li><a href="#" class="<?php echo $navigationLinkClasses ?>"><i class="fas fa-home fa-lg"></i> <label>Club House</label></a></li>
-				<li><a href="#" class="<?php echo $navigationLinkClasses ?>"><i class="far fa-images fa-lg"></i> <label>Gellery</label></a></li>
+				<li><a href="/" class="<?php echo $navigationLinkClasses ?>"><i class="fas fa-home fa-lg"></i> <label>Club House</label></a></li>
+				<li><a href="/Gallery/" class="<?php echo $navigationLinkClasses ?>"><i class="far fa-images fa-lg"></i> <label>Gellery</label></a></li>
 			</ul>
 		</nav>
 	</div>
