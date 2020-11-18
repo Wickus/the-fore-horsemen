@@ -22,26 +22,24 @@ ListMedia.prototype.init = function () {
 ListMedia.prototype.getJsonMediaData = function (callback) {
 	var self = this;
 	if(self.canRequestMedia) {
-		self.setExcludeMedia(function(){
-			$.post(self.options.requestURL,{
-					mediaPerPage:self.options.mediaPerPage, 
-					excludeMedia:self.excludeMedia.toString()
-				}, function (data) {
-				if (typeof data == "object") {
-					if(typeof callback == "function") {
-						self.mediaJsonData = data;
-						if(data.length < self.options.mediaPerPage){
-							self.canRequestMedia = false;
-						}
-						callback();
+		$.post(self.options.url,{
+				mediaPerPage:self.options.mediaPerPage, 
+				excludeMedia:self.excludeMedia.toString()
+			}, function (data) {
+			if (typeof data == "object") {
+				if(typeof callback == "function") {
+					self.mediaJsonData = data;
+					if(data.length < self.options.mediaPerPage){
+						self.canRequestMedia = false;
 					}
-				} else {
-					console.error("MediaList: Data Error");
+					callback();
 				}
-			}).fail(function(){
-				console.error("MediaList: Request Error");
-			});
-		});		
+			} else {
+				console.error("MediaList: Data Error");
+			}
+		}).fail(function(){
+			console.error("MediaList: Request Error");
+		});	
 	}	
 }
 
@@ -63,29 +61,15 @@ ListMedia.prototype.createMediaContainer = function () {
 }
 
 ListMedia.prototype.createMedia = function (obj) {
-	if(obj.FileType == "image"){
+	if(obj.type == "image"){
 		return    '<div class="masonry-item media-item new" data-id="'+obj.id+'" data-type="image">'
-				+ '	<img class="lazyload masonry-content" title="'+obj.FileName+'" alt="'+obj.FileDescription+'" src="'+obj.thumbPath+'" data-src="'+obj.origenalPath+'">'
+				+ '	<img class="lazyload masonry-content" title="'+obj.url+'" alt="Gallery Image" src="'+obj.url+'">'
 				+ '</div>';
 	}else{
 		return    '<div class="masonry-item  media-item video-item new" data-id="'+obj.id+'" data-type="video">'
 				+ '	<img class="lazyload masonry-content" title="'+obj.FileName+'" alt="'+obj.FileDescription+'" src="'+obj.origenalPath+'" data-src="'+obj.origenalPath+'">'
 				+ '</div>';
 	}
-}
-
-ListMedia.prototype.setExcludeMedia = function(callback) {
-	var self = this;
-	self.excludeMedia = [];
-	var items = self.selector.find(".media-item");
-
-	items.each(function(i){
-		var id = $(this).data("id");
-		self.excludeMedia.push(id);
-		if(i == (items.length - 1) && typeof callback == "function"){
-			callback();
-		}
-	});
 }
 
 ListMedia.prototype.scrollListerner = function() {
