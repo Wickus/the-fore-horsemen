@@ -3,7 +3,7 @@ function ListMedia(selector, options) {
 	this.options = options;
 	this.mediaLoading = false;
 	this.startPoint = 0;
-	this.endPoint = 99;
+	this.endPoint = 30;
 	this.mediaJsonData = {};
 	this.initListener = false;
 	this.canRequestMedia = true;
@@ -52,7 +52,7 @@ ListMedia.prototype.createMediaContainer = function () {
 		}
 		if(i == self.mediaJsonData.length -1) {
 			if(typeof self.options.afterMediaAdded == "function"){
-				self.options.afterMediaAdded();
+				self.options.afterMediaAdded();			
 			}
 			if(!self.initListener)	
 				self.scrollListerner();
@@ -62,7 +62,7 @@ ListMedia.prototype.createMediaContainer = function () {
 
 ListMedia.prototype.createMedia = function (obj) {
 	if(obj.type == "image"){
-		return    '<div class="masonry-item media-item new" data-id="'+obj.id+'" data-type="image">'
+		return    '<div class="masonry-item media-item new" data-type="image">'
 				+ '	<img class="lazyload masonry-content" title="'+obj.url+'" alt="Gallery Image" src="'+obj.url+'">'
 				+ '</div>';
 	}else{
@@ -84,15 +84,15 @@ ListMedia.prototype.scrollListerner = function() {
 		if(selectorOffsetBottom <= 0 && !self.mediaLoading) {			
 			if(self.endPoint >= self.options.mediaPerPage){
 				self.startPoint = 0;
-				self.endPoint = 99;
+				self.endPoint = 30;
 				self.mediaLoading = true;
 				self.getJsonMediaData(function(){
 					self.createMediaContainer();
 					self.mediaLoading = false;
 				});				
 			}else{
-				self.startPoint += 99;
-				self.endPoint += 99;
+				self.startPoint += 30;
+				self.endPoint += 30;
 				self.createMediaContainer();
 			}
 		}

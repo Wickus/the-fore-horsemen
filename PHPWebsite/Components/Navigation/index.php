@@ -21,6 +21,8 @@ if(userDevice() == "tablet" || userDevice() == "mobile"){
 			<ul>
 				<li><a href="/" class="<?php echo $navigationLinkClasses ?>"><i class="fas fa-home fa-lg"></i> <label>Club House</label></a></li>
 				<li><a href="/Gallery/" class="<?php echo $navigationLinkClasses ?>"><i class="far fa-images fa-lg"></i> <label>Gellery</label></a></li>
+				<li><a href="https://www.pgatour.com/stats/stat.186.html" class="<?php echo $navigationLinkClasses ?>"><i class="fas fa-list-ol"></i> <label>PGA Stats</label></a></li>
+				<li><a href="https://booking.playmoregolf.co.za/dashboard" class="<?php echo $navigationLinkClasses ?>"><i class="fas fa-golf-ball"></i> <label>Play More Golf</label></a></li>
 			</ul>
 		</nav>
 	</div>

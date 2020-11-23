@@ -39,6 +39,6 @@
 		</div>
 	</div>
 	<div class="website-license">
-		<p>© 2020 All rights reserved</p>
+		<p> © 2020 All rights reserved. Developed by Spokie Studios™.</p>
 	</div>
 </div>
