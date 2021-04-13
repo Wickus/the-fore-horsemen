@@ -18,4 +18,11 @@
 <link rel="stylesheet" href="/Common/Theme/colors.css">
 <link rel="stylesheet" href="/Common/css/website.css">
 <!-- SCRIPTS -->
-<script defer type="text/javascript" src="/common/js/jquery.min.js"></script>
+<script type="text/javascript" src="/common/js/jquery.min.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#available-libraries -->
+<script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+<script type="text/javascript" src="/Common/js/firebase/firebase-connection.js"></script>
