@@ -13,7 +13,7 @@ $navigationLinkClasses = "";
 		<!-- Website Navigation -->
 		<?php include($_SERVER["DOCUMENT_ROOT"] . "/Components/Navigation/index.php") ?>
 		<!-- Page Header -->
-		<?php include($_SERVER["DOCUMENT_ROOT"] . "/Components/WebsiteHeader/index.php") ?>
+		<?php include($_SERVER["DOCUMENT_ROOT"] . "/Components/Websiteheader/index.php") ?>
 		<!-- Page Content -->
 		<div class="content-ctn">
 			<!-- Introduction section -->
