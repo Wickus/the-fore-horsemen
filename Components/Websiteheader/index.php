@@ -1,7 +1,7 @@
 <!-- Website Header styles -->
 <link rel="stylesheet" href="/Components/Websiteheader/styles.css">
 <div class="website-header">
-	<video muted autoplay preload loop>
+	<video muted autoplay preload loop autoplay>
 		<source src="/Resources/Backgrounds/header-video.mp4" type="video/mp4"/>
 		<source src="/Resources/Backgrounds/header-video.webm" type="video/webm"/>
 	</video>
