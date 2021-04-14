@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/Common/Theme/colors.css">
+<link rel="stylesheet" href="/Common/theme/colors.css">
 <link rel="stylesheet" href="/Common/css/website.css">
 <!-- SCRIPTS -->
 <script type="text/javascript" src="/Common/js/jquery.min.js"></script>
