@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="contributor" content="Wickus Van Der Merwe">
 <meta name="updated" content="<?php echo $siteUpdated?>">
-<link rel="icon" href="/Resources/logo/logo-white.png">
+<link rel="icon" href="/Resources/Logo/logo-white.png">
 <!-- STYLES -->
 <link href="/Common/fontawesome/css/all.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
