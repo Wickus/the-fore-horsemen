@@ -3,14 +3,14 @@ include($_SERVER["DOCUMENT_ROOT"] . "/Common/php/functions.php");
 $page_title = "Gallery";
 $mobileNavigationClasses = " background-color-default scrolled";
 $navigationLinkClasses = "color-secondary"; 
-$websiteLogoPath = "/Resources/logo/logo-black.png";
+$websiteLogoPath = "/Resources/Logo/logo-black.png";
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<?php include($_SERVER["DOCUMENT_ROOT"] . "/Common/Header.php") ?>
 		<link rel="stylesheet" href="/Gallery/styles.css"/>
-		<script defer type="text/javascript" src="/common/js/colcade.min.js"></script>
+		<script defer type="text/javascript" src="/Common/js/colcade.min.js"></script>
 		<script defer type="text/javascript" src="/Common/js/list-media.js"></script>
 		<script defer type="text/javascript" src="/Gallery/scripts.js"></script>
 	</head>

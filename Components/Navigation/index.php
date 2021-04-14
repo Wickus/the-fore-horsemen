@@ -1,7 +1,7 @@
 <?php
 if(userDevice() == "tablet" || userDevice() == "mobile"){
 	$mobileNavigationClasses = "mobile-navigation background-color-default ";
-	$websiteLogoPath = "/Resources/logo/logo-black.png";
+	$websiteLogoPath = "/Resources/Logo/logo-black.png";
 	$navigationLinkClasses = "color-secondary";
 }
 ?>

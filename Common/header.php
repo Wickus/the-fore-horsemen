@@ -11,14 +11,14 @@
 <meta name="updated" content="<?php echo $siteUpdated?>">
 <link rel="icon" href="/Resources/logo/logo-white.png">
 <!-- STYLES -->
-<link href="/common/fontawesome/css/all.css" rel="stylesheet">
+<link href="/Common/fontawesome/css/all.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="/Common/Theme/colors.css">
 <link rel="stylesheet" href="/Common/css/website.css">
 <!-- SCRIPTS -->
-<script type="text/javascript" src="/common/js/jquery.min.js"></script>
+<script type="text/javascript" src="/Common/js/jquery.min.js"></script>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>

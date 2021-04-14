@@ -3,7 +3,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/Common/php/functions.php");
 $page_title = "Club House";
 $mobileNavigationClasses = "animate";
 $navigationLinkClasses = ""; 
-$websiteLogoPath = "/Resources/logo/logo-white.png";
+$websiteLogoPath = "/Resources/Logo/logo-white.png";
 ?>
 <!DOCTYPE html>
 <html>
