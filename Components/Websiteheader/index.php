@@ -1,5 +1,6 @@
 <!-- Website Header styles -->
 <link rel="stylesheet" href="/Components/Websiteheader/styles.css">
+<script type="text/javascript" src="/Components/Websiteheader/script.js"></script>
 <div class="website-header">
 	<video muted autoplay preload loop playsinline>
 		<source src="/Resources/Backgrounds/header-video.mp4" type="video/mp4"/>
@@ -15,4 +16,3 @@
 	</div>
 	<span class="scroll-icon"></span>
 </div>
-<script src="/Components/Websiteheader/script.js">
