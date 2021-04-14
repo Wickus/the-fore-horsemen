@@ -1,3 +1,4 @@
+<?php $websiteLogoPath = "/Resources/Logo/logo-white.png"; ?>
 <!-- Site title -->
 <title>The Fore Horsemen: <?php echo $page_title ?></title>
 <!-- Site meta data -->
