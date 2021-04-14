@@ -1,3 +1,4 @@
+let DATABSE = null;
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -9,23 +10,13 @@ const firebaseConfig = {
     appId: "1:458901564387:web:75feca0a9a8f4b434b0ed6",
     measurementId: "G-Y1QPRQCB7C",
 };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-
-const database = firebase.database();
-
-database
-    .ref()
-    .child("connection")
-    .get()
-    .then((snapshot) => {
-        if (snapshot.exists()) {
-            console.log(snapshot.val());
-        } else {
-            console.log("No data available");
-        }
-    })
-    .catch((error) => {
-        console.error(error);
-    });
+try {
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    // Set global database
+    DATABSE = firebase.database();
+    console.log("Firebase Connected");
+} catch (e) {
+    console.error("Firebase not connected:\n" + e.message);
+}

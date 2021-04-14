@@ -54,4 +54,10 @@ function userDevice() {
 	   return 'desktop';
 	}  
 }
+
+function getQueries(){
+	$queries = array();
+	parse_str($_SERVER['QUERY_STRING'], $queries);
+	return $queries;
+}
 ?>
