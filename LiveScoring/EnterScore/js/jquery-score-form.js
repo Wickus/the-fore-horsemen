@@ -63,8 +63,8 @@ class ScoreForm {
 			<div class="score-form">
 				<form name="score">
 					<p>S.I: ${self.coarseData.holes[self.userInfo.hole].stroke} / Par:${self.coarseData.holes[self.userInfo.hole].par}</p>
-					<label>Enter score:</label>
-					<input type="number" name="strokes" placeholder="Enter score" value="${self.userInfo.scorecard[parseInt(self.userInfo.hole) - 1].strokes}">
+					<label>Enter strokes:</label>
+					<input type="number" name="strokes" placeholder="Enter strokes" value="${self.userInfo.scorecard[parseInt(self.userInfo.hole) - 1].strokes}">
 					<label>Enter putts:</label>
 					<input type="number" name="putts" placeholder="Enter putts" value="${self.userInfo.scorecard[parseInt(self.userInfo.hole) - 1].putts}">
 					<button type="submit" class="background-color-secondary">Next Hole</button>
