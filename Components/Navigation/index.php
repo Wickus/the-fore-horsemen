@@ -19,11 +19,21 @@ if(userDevice() == "tablet" || userDevice() == "mobile"){
 	<div class="navigation-links-wrapper">
 		<nav>
 			<ul>
-				<li><a href="/" class="<?php echo $navigationLinkClasses ?>"><i class="fas fa-home fa-lg"></i> <label>Club House</label></a></li>
-				<li><a href="/Gallery/" class="<?php echo $navigationLinkClasses ?>"><i class="far fa-images fa-lg"></i> <label>Gallery</label></a></li>
-				<li><a href="/LiveScoring/?q=leaderboard" class="<?php echo $navigationLinkClasses ?>"><i class="fas fa-th-list"></i> <label>Live Scoring</label></a></li>
-				<li><a href="https://www.pgatour.com/stats/stat.186.html" class="<?php echo $navigationLinkClasses ?>"><i class="fas fa-list-ol"></i> <label>PGA Stats</label></a></li>
-				<li><a href="https://booking.playmoregolf.co.za/dashboard" class="<?php echo $navigationLinkClasses ?>"><i class="fas fa-golf-ball"></i> <label>Play More Golf</label></a></li>
+				<a href="/" class="<?php echo $navigationLinkClasses ?>">
+					<li><i class="fas fa-home fa-lg"></i> <label>Club House</label> </li>
+				</a>
+				<a href="/Gallery/" class="<?php echo $navigationLinkClasses ?>">
+					<li><i class="far fa-images fa-lg"></i> <label>Gallery</label> </li>
+				</a>
+				<a href="/LiveScoring/?q=leaderboard" class="<?php echo $navigationLinkClasses ?>">
+					<li class="beta"><i class="fas fa-th-list"></i> <label>Live Scoring</label> </li>
+				</a>
+				<a href="https://www.pgatour.com/stats/stat.186.html" class="<?php echo $navigationLinkClasses ?>">
+					<li><i class="fas fa-list-ol"></i> <label>PGA Stats</label> </li>
+				</a>
+				<a href="https://booking.playmoregolf.co.za/dashboard" class="<?php echo $navigationLinkClasses ?>">
+					<li><i class="fas fa-golf-ball"></i> <label>Play More Golf</label> </li>
+				</a>
 			</ul>
 		</nav>
 	</div>
