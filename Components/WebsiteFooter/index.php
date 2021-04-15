@@ -1,5 +1,5 @@
 <!-- Website footer styles -->
-<link rel="stylesheet" href="/Components/WebsiteFooter/styles.css">
+<link rel="stylesheet" href="/Components/WebsiteFooter/styles.css?t=<?php echo $siteUpdated?>">
 <div class="website-footer background-color-default-accent">
 	<div class="golf-ball"></div>
 	<div class="footer-background"></div>

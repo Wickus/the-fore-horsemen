@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/Components/Spacer/styles.css">
+<link rel="stylesheet" href="/Components/Spacer/styles.css?t=<?php echo $siteUpdated?>">
 <div class="website-spacer">
 	<div class="spacer-content">
 		<p>

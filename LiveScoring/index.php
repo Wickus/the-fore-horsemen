@@ -14,7 +14,7 @@ $enterScoreTabClasses = $activeTab == "enterscore" ? "background-color-primary" 
 <html>
 	<head>
 		<?php include($_SERVER["DOCUMENT_ROOT"] . "/Common/Header.php") ?>
-		<link rel="stylesheet" href="./styles.css">
+		<link rel="stylesheet" href="./styles.css?t=<?php echo $siteUpdated?>">
 	</head>
 	<body>
 		<!-- Website Navigation -->

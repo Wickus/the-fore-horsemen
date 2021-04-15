@@ -9,10 +9,10 @@ $websiteLogoPath = "/Resources/Logo/logo-black.png";
 <html>
 	<head>
 		<?php include($_SERVER["DOCUMENT_ROOT"] . "/Common/Header.php") ?>
-		<link rel="stylesheet" href="/Gallery/styles.css"/>
+		<link rel="stylesheet" href="/Gallery/styles.css?t=<?php echo $siteUpdated?>"/>
 		<script defer type="text/javascript" src="/Common/js/colcade.min.js"></script>
-		<script defer type="text/javascript" src="/Common/js/list-media.js"></script>
-		<script defer type="text/javascript" src="/Gallery/scripts.js"></script>
+		<script defer type="text/javascript" src="/Common/js/list-media.js?t=<?php echo $siteUpdated?>"></script>
+		<script defer type="text/javascript" src="/Gallery/scripts.js?t=<?php echo $siteUpdated?>"></script>
 	</head>
 	<body>
 		<!-- Website Navigation -->

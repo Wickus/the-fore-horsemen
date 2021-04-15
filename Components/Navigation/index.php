@@ -6,8 +6,8 @@ if(userDevice() == "tablet" || userDevice() == "mobile"){
 }
 ?>
 
-<link rel="stylesheet" href="/Components/Navigation/styles.css">
-<script defer type="text/javascript" src="/Components/Navigation/scripts.js"></script>
+<link rel="stylesheet" href="/Components/Navigation/styles.css?t=<?php echo $siteUpdated?>">
+<script defer type="text/javascript" src="/Components/Navigation/scripts.js?t=<?php echo $siteUpdated?>"></script>
 <!-- Navigation -->
 <div class="navigation-wrapper component <?php echo $mobileNavigationClasses ?>">
 	<div class="mobile-nav-trigger-wrapper">

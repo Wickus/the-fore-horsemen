@@ -19,7 +19,7 @@ $navigationLinkClasses = "";
 			<!-- Introduction section -->
 			<div id="Introduction" class="content-row">
 				<div class="content-image">
-					<img src="/ClubHouse/Resources/the-fore-horsemen-members.jpg" alt="The Fore Horsemen Members">
+					<img src="/ClubHouse/Resources/the-fore-horsemen-members.jpg?t=<?php echo $siteUpdated?>" alt="The Fore Horsemen Members">
 				</div>
 				<div class="content background-color-default">
 					<h2>About The Fore Horsemen</h2>
