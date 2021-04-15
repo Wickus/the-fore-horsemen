@@ -19,7 +19,7 @@ $enterScoreTabClasses = $activeTab == "enterscore" ? "background-color-primary" 
 	<body>
 		<!-- Website Navigation -->
 		<?php include($_SERVER["DOCUMENT_ROOT"] . "/Components/Navigation/index.php") ?>
-		<div class="content-ctn">
+		<div class="content-ctn background-color-default">
 			<div class="content-row">
 				<div class="tab-container color-secondary">
 					<a href="?q=leaderboard"><button type="button" class="<?php echo $leaderBoardTabClasses?>">Leaderboard</button></a>
@@ -28,20 +28,18 @@ $enterScoreTabClasses = $activeTab == "enterscore" ? "background-color-primary" 
 				</div>
 			</div>
 
-			<div class="content-row background-color-default">
-				<?php
-					switch(true){
-						case $activeTab == "scorecard":
-							include($_SERVER["DOCUMENT_ROOT"] . "/LiveScoring/ScoreCard/index.php");
-							break;
-						case $activeTab == "enterscore":
-							include($_SERVER["DOCUMENT_ROOT"] . "/LiveScoring/EnterScore/index.php");
-							break;
-						default:
-						include($_SERVER["DOCUMENT_ROOT"] . "/LiveScoring/Leaderboard/index.php");							
-					}
-				?>
-			</div>
+			<?php
+				switch(true){
+					case $activeTab == "scorecard":
+						include($_SERVER["DOCUMENT_ROOT"] . "/LiveScoring/ScoreCard/index.php");
+						break;
+					case $activeTab == "enterscore":
+						include($_SERVER["DOCUMENT_ROOT"] . "/LiveScoring/EnterScore/index.php");
+						break;
+					default:
+					include($_SERVER["DOCUMENT_ROOT"] . "/LiveScoring/Leaderboard/index.php");							
+				}
+			?>
 		</div>
 	</body>
 </html>
