@@ -45,17 +45,11 @@ class LeaderBoard {
     // get players from firebase
     getPlayers() {
         const self = this;
-        DATABSE.ref()
-            .child("players")
-            .get()
-            .then((snapshot) => {
-                let players = snapshot.val();
-                self.players = players;
-                self.listPlayers();
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+        DATABSE.ref("players").on("value", (snapshot) => {
+            let players = snapshot.val();
+            self.players = players;
+            self.listPlayers();
+        });
     }
 
     // List the players in thier position
@@ -69,8 +63,8 @@ class LeaderBoard {
             html += `<tr>
 						<td>${index + 1}</td>
 						<td class="team-${player.team}">${player.name} ${player.lastname}</td>
-						<td>0</td>
-						<td>E</td>
+						<td>${player.hole}</td>
+						<td>${player.score == 0 ? "E" : player.score}</td>
 					</tr>`;
             if (index === Object.keys(players).length - 1) {
                 $(document).trigger("list-players", [html]);
@@ -97,11 +91,7 @@ class LeaderBoard {
     }
 
     // Update of the table
-    update() {
-        // this.setHoles();
-        // this.calculateScore();
-        // this.setPlayerPosition();
-    }
+    update() {}
 }
 
 // Initiating the class to a jQuery object
