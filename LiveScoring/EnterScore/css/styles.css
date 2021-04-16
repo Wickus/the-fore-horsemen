@@ -10,11 +10,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     box-shadow: 0px 0px 4px #ccc;
     margin: 6px;
     border-radius: 6px;
+    font-size: 12px;
 }
 
 form {
