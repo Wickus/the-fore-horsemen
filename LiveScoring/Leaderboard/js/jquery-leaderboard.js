@@ -64,7 +64,7 @@ class LeaderBoard {
 						<td>${index + 1}</td>
 						<td class="team-${player.team}">${player.name} ${player.lastname}</td>
 						<td>${player.hole}</td>
-						<td>${player.score == 0 ? "E" : player.score}</td>
+						<td data-score="${player.score}">${player.score == 0 ? "E" : player.score}</td>
 					</tr>`;
             if (index === Object.keys(players).length - 1) {
                 $(document).trigger("list-players", [html]);
@@ -91,7 +91,56 @@ class LeaderBoard {
     }
 
     // Update of the table
-    update() {}
+    update() {
+        this.sortTable();
+        this.setPosition();
+    }
+
+    // Sort table
+    sortTable() {
+        const modifier = 1; // assending
+        const table = $(this.element).find("table");
+        const rows = Array.from($(table).find("tbody tr"));
+        const col = 4; // column number to sort
+
+        const sortedRows = rows.sort((a, b) => {
+            const aColNum = parseInt(
+                $(a)
+                    .find("td:nth-child(" + col + ")")
+                    .attr("data-score")
+            );
+            const bColNum = parseInt(
+                $(b)
+                    .find("td:nth-child(" + col + ")")
+                    .attr("data-score")
+            );
+
+            return aColNum > bColNum ? 1 * modifier : -1 * modifier;
+        });
+
+        table.find("tbody").html(sortedRows);
+    }
+
+    // set position
+    setPosition() {
+        const table = $(this.element).find("table");
+        const rows = Array.from($(table).find("tbody tr"));
+        let pos = 1;
+
+        $.each(rows, function (index) {
+            const score = $(this).find("td:last-child").attr("data-score");
+
+            if (index > 0) {
+                const prevPlayerScore = $(this).prev().find("td:last-child").attr("data-score") ? $(this).prev().find("td:last-child").attr("data-score") : 0;
+                if (score != prevPlayerScore) {
+                    pos += 1;
+                }
+                $(this).find("td:first-child").html(pos).attr("data-pos", pos);
+            } else {
+                $(this).find("td:first-child").html(pos).attr("data-pos", pos);
+            }
+        });
+    }
 }
 
 // Initiating the class to a jQuery object
