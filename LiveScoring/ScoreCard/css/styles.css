@@ -50,7 +50,7 @@ form input {
 }
 
 #score-card table tbody td:last-child {
-    width: auto;
+    width: 42px;
 }
 
 #score-card .summary {
