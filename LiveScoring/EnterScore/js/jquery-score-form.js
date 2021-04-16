@@ -67,6 +67,8 @@ class ScoreForm {
 					<input type="number" name="strokes" placeholder="Enter strokes" value="${self.userInfo.scorecard[parseInt(self.userInfo.hole) - 1].strokes}">
 					<label>Enter putts:</label>
 					<input type="number" name="putts" placeholder="Enter putts" value="${self.userInfo.scorecard[parseInt(self.userInfo.hole) - 1].putts}">
+					<label>Score:</label>
+					<input type="number" name="score" placeholder="Enter putts" value="${self.userInfo.scorecard[parseInt(self.userInfo.hole) - 1].score}" readonly>
 					<button type="submit" class="background-color-secondary">Next Hole</button>
 				</form>
 			</div>
@@ -101,16 +103,95 @@ class ScoreForm {
             .on("submit", "form[name='score']", function (event) {
                 event.preventDefault();
 
-                const strokes = $(this).find("input[name='strokes']").val();
-                const putts = $(this).find("input[name='putts']").val();
+                const strokes = parseInt($(this).find("input[name='strokes']").val());
+                const putts = parseInt($(this).find("input[name='putts']").val());
+                const score = parseInt($(this).find("input[name='score']").val());
 
                 self.userInfo.scorecard[parseInt(self.userInfo.hole) - 1].strokes = strokes;
                 self.userInfo.scorecard[parseInt(self.userInfo.hole) - 1].putts = putts;
+                self.userInfo.scorecard[parseInt(self.userInfo.hole) - 1].score = score;
 
                 DATABSE.ref().child("players").child(user).set(self.userInfo);
                 self.setHole(parseInt(self.userInfo.hole) + 1);
                 self.calculateScore();
             });
+
+        $(document)
+            .off("input", "input[name='strokes']")
+            .on("input", "input[name='strokes']", function (event) {
+                $("input[name='score']").val(self.calculateStablefordScore(parseInt($(this).val())));
+            });
+    }
+
+    // https://www.bunkered.co.uk/golf-news/stableford-the-golf-scoring-system-explained
+    calculateStablefordScore(strokes) {
+        const self = this;
+        const hole = self.userInfo.hole;
+        const holeStroke = self.coarseData.holes[hole].stroke;
+        const holePar = self.coarseData.holes[hole].par;
+        let hci = self.userInfo.hci;
+        const extraScore = self.calcExtraStrokes(hci, holeStroke);
+        let score = 0;
+
+        switch (true) {
+            case strokes - holePar == -4:
+                score = 6 + extraScore;
+                break;
+            case strokes - holePar == -3:
+                score = 5 + extraScore;
+                break;
+            case strokes - holePar == -2:
+                score = 4 + extraScore;
+                break;
+            case strokes - holePar == -1:
+                score = 3 + extraScore;
+                break;
+            case strokes - holePar == 0:
+                score = 2 + extraScore;
+                break;
+            case strokes - holePar == 1:
+                score = 1 + extraScore;
+                break;
+            case strokes - holePar > 1:
+                if (strokes > holePar + 2 + extraScore) {
+                    strokes = holePar + 2 + extraScore;
+                    score = 0;
+                    $("input[name='strokes']").addClass("addjusted").val(strokes);
+                } else {
+                    score = holePar + 2 + extraScore - strokes;
+                }
+                break;
+        }
+
+        return score;
+    }
+
+    calcExtraStrokes(hci, stroke) {
+        let diff = 0;
+        let toHole = 0;
+        let extraScore = 0;
+
+        if (hci > 18) {
+            diff = hci - 18;
+            extraScore += 1;
+
+            while (diff > 0) {
+                extraScore += 1;
+                diff -= 18;
+            }
+        } else {
+            if (hci > stroke) {
+                extraScore += 1;
+            }
+        }
+
+        toHole = diff + 18;
+
+        if (stroke > toHole) {
+            extraScore -= 1;
+        }
+
+        return extraScore;
     }
 }
 
