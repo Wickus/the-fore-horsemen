@@ -186,14 +186,53 @@ class LeaderBoard {
                 $("<div class='team-" + team + "'><span>" + name + " " + lastName + "</span></div>").insertBefore($("#group" + (index + 1) + " ." + team).children()[0]);
             });
 
-            self.setSkin(self.groups[index + 1]);
+            self.setSkin(self.groups[index + 1], index + 1);
         });
     }
 
-    setSkin(groupMembers) {
+    setSkin(groupMembers, group) {
+        const self = this;
         let foreSkin = 0;
         let horseMenSkin = 0;
-        $.each(groupMembers, function () {});
+
+        const member1 = self.players[groupMembers[0]];
+        const member2 = self.players[groupMembers[1]];
+        const member3 = self.players[groupMembers[2]];
+        const member4 = self.players[groupMembers[3]];
+
+        for (let i = 0; i < 18; i++) {
+            let foreScore = member1.scorecard[i].score + member2.scorecard[i].score;
+            let horsemenScore = member3.scorecard[i].score + member4.scorecard[i].score;
+
+            switch (true) {
+                case foreScore > horsemenScore:
+                    foreSkin += 1;
+                    horseMenSkin -= 1;
+                    break;
+                case foreScore < horsemenScore:
+                    horseMenSkin += 1;
+                    foreSkin -= 1;
+                    break;
+            }
+        }
+
+        switch (true) {
+            case foreSkin > 0:
+                $("#group1 .fore .skin").html(foreSkin + " UP");
+                break;
+            case foreSkin < 0:
+                $("#group1 .fore .skin").html(foreSkin * -1 + " DOWN");
+                break;
+        }
+
+        switch (true) {
+            case horseMenSkin > 0:
+                $("#group1 .horsemen .skin").html(foreSkin + " UP");
+                break;
+            case horseMenSkin < 0:
+                $("#group1 .horsemen .skin").html(horseMenSkin * -1 + " DOWN");
+                break;
+        }
     }
 }
 
