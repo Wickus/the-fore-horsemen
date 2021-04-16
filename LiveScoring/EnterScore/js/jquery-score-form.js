@@ -133,34 +133,36 @@ class ScoreForm {
         const extraScore = self.calcExtraStrokes(hci, holeStroke);
         let score = 0;
 
-        switch (true) {
-            case strokes - holePar == -4:
-                score = 6 + extraScore;
-                break;
-            case strokes - holePar == -3:
-                score = 5 + extraScore;
-                break;
-            case strokes - holePar == -2:
-                score = 4 + extraScore;
-                break;
-            case strokes - holePar == -1:
-                score = 3 + extraScore;
-                break;
-            case strokes - holePar == 0:
-                score = 2 + extraScore;
-                break;
-            case strokes - holePar == 1:
-                score = 1 + extraScore;
-                break;
-            case strokes - holePar > 1:
-                if (strokes > holePar + 2 + extraScore) {
-                    strokes = holePar + 2 + extraScore;
-                    score = 0;
-                    $("input[name='strokes']").addClass("addjusted").val(strokes);
-                } else {
-                    score = holePar + 2 + extraScore - strokes;
-                }
-                break;
+        if (strokes !== 0) {
+            switch (true) {
+                case strokes - holePar == -4:
+                    score = 6 + extraScore;
+                    break;
+                case strokes - holePar == -3:
+                    score = 5 + extraScore;
+                    break;
+                case strokes - holePar == -2:
+                    score = 4 + extraScore;
+                    break;
+                case strokes - holePar == -1:
+                    score = 3 + extraScore;
+                    break;
+                case strokes - holePar == 0:
+                    score = 2 + extraScore;
+                    break;
+                case strokes - holePar == 1:
+                    score = 1 + extraScore;
+                    break;
+                case strokes - holePar > 1:
+                    if (strokes > holePar + 2 + extraScore) {
+                        strokes = holePar + 2 + extraScore;
+                        score = 0;
+                        $("input[name='strokes']").addClass("addjusted").val(strokes);
+                    } else {
+                        score = holePar + 2 + extraScore - strokes;
+                    }
+                    break;
+            }
         }
 
         return score;
