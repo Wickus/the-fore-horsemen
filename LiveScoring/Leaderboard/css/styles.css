@@ -41,12 +41,18 @@
     background-position: 5px center;
 }
 
-#leaderboard table td.team-fore {
+.team-fore {
     background-image: url(/Resources/Icons/team-fore.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
 }
 
-#leaderboard table td.team-horsemen {
+.team-horsemen {
     background-image: url("/Resources/Icons/team-horsemen.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
 }
 
 #leaderboard table td:first-child,
@@ -69,4 +75,38 @@
 }
 #leaderboard table td[data-pos="3"] {
     background-color: rgba(165, 42, 42, 0.5);
+}
+
+#groups > div {
+    width: calc(100% - 20px);
+    height: auto;
+    margin: 10px auto;
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px #ccc;
+    padding-bottom: 6px;
+}
+
+#groups > div h3 {
+    padding: 6px 0px;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 12px;
+    font-weight: bolder;
+}
+
+#groups > div > div {
+    position: relative;
+    text-align: left;
+    margin: 16px 4px;
+}
+
+#groups > div > div span {
+    display: block;
+    margin-left: 30px;
+}
+
+#groups > div > div .skin {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
 }

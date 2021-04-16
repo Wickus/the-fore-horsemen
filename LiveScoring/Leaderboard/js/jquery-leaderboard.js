@@ -8,6 +8,8 @@ class LeaderBoard {
         this.options = options;
         this.element = element;
         this.leaderboardData = null;
+        this.players = {};
+        this.groups = {};
         this.create();
     }
     // Get the settings of the class
@@ -49,6 +51,10 @@ class LeaderBoard {
             let players = snapshot.val();
             self.players = players;
             self.listPlayers();
+
+            if (self.options.format == "ryder-cup") {
+                self.getGroups();
+            }
         });
     }
 
@@ -140,6 +146,54 @@ class LeaderBoard {
                 $(this).find("td:first-child").html(pos).attr("data-pos", pos);
             }
         });
+    }
+
+    getGroups() {
+        const self = this;
+        DATABSE.ref("groups").on("value", (snapshot) => {
+            self.groups = snapshot.val();
+            self.createRyderCupGroups();
+        });
+    }
+
+    // create ryder cup format elements
+    createRyderCupGroups() {
+        const self = this;
+        const groups = Object.keys(self.groups);
+        const players = this.players;
+
+        $(self.element).find("#groups").remove();
+        $(self.element).append("<div id='groups'></div>");
+
+        $.each(groups, function (index) {
+            $(self.element).find("#groups").append(`
+				<div id="group${index + 1}">
+					<h3>Group ${index + 1}</h3>
+					<div class="fore">
+						<div class="skin">SQUARE</div>
+					</div>
+					<div class="horsemen">
+						<div class="skin">SQUARE</div>
+					</div>
+				</div>
+			`);
+
+            $.each(self.groups[index + 1], function () {
+                const name = players[this].name;
+                const lastName = players[this].lastname;
+                const team = players[this].team;
+
+                $("<div class='team-" + team + "'><span>" + name + " " + lastName + "</span></div>").insertBefore($("#group" + (index + 1) + " ." + team).children()[0]);
+            });
+
+            self.setSkin(self.groups[index + 1]);
+        });
+    }
+
+    setSkin(groupMembers) {
+        let foreSkin = 0;
+        let horseMenSkin = 0;
+        $.each(groupMembers, function () {});
     }
 }
 

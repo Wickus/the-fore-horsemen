@@ -1,5 +1,5 @@
 {
-	"group":{
+	"groups":{
 		"1":["wickus@fore","jonty@fore","mias@horsemen","johank@horsemen"],
 		"2":["ralph@fore","desmond@fore","lourens@horsemen","raymond@horsemen"],
 		"3":["martin@fore","liaan@fore","shaun@horsemen","johans@horsemen"],
@@ -9,7 +9,7 @@
 		"wickus@fore":{
 			"name":"Wickus",
 			"lastname":"van der Merwe",
-			"hci":3.4,
+			"hci":4,
 			"team":"fore",
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -37,7 +37,7 @@
 		"jonty@fore":{
 			"name":"Jonty",
 			"lastname":"Jarvis",
-			"hci":11.5,
+			"hci":14,
 			"team":"fore",
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -65,7 +65,7 @@
 		"mias@horsemen":{
 			"name":"Mias",
 			"lastname":"van Heerden",
-			"hci":9.9,
+			"hci":12,
 			"team":"horsemen",
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -93,7 +93,7 @@
 		"johank@horsemen":{
 			"name":"Johan",
 			"lastname":"Kapp",
-			"hci":11,
+			"hci":14,
 			"team":"horsemen",
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -121,7 +121,7 @@
 		"ralph@fore":{
 			"name":"Ralph",
 			"lastname":"Hoppe",
-			"hci":12.5,
+			"hci":15,
 			"team":"fore",
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -149,7 +149,7 @@
 		"desmond@fore":{
 			"name":"Desmond",
 			"lastname":"Jonker",
-			"hci":28,
+			"hci":34,
 			"team":"fore",			
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -177,7 +177,7 @@
 		"lourens@horsemen":{
 			"name":"Lourens",
 			"lastname":"Venter",
-			"hci":3.4,
+			"hci":31,
 			"team":"horsemen",			
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -205,7 +205,7 @@
 		"raymond@horsemen":{
 			"name":"Raymond",
 			"lastname":"Ferreira",
-			"hci":28,
+			"hci":34,
 			"team":"horsemen",			
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -233,7 +233,7 @@
 		"martin@fore":{
 			"name":"Martin",
 			"lastname":"Fritz",
-			"hci":19,
+			"hci":22,
 			"team":"fore",			
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -261,7 +261,7 @@
 		"liaan@fore":{
 			"name":"Liaan",
 			"lastname":"Fourie",
-			"hci":21,
+			"hci":25,
 			"team":"fore",			
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -289,7 +289,7 @@
 		"shaun@horsemen":{
 			"name":"Shaun",
 			"lastname":"Scriven",
-			"hci":19,
+			"hci":22,
 			"team":"horsemen",			
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -317,7 +317,7 @@
 		"johans@horsemen":{
 			"name":"Johan",
 			"lastname":"Spaumer",
-			"hci":20,
+			"hci":25,
 			"team":"horsemen",			
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -345,7 +345,7 @@
 		"jason@fore":{
 			"name":"Jason",
 			"lastname":"Neilson",
-			"hci":26,
+			"hci":31,
 			"team":"fore",			
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -373,7 +373,7 @@
 		"werner@fore":{
 			"name":"Werner",
 			"lastname":"Kruger",
-			"hci":30.9,
+			"hci":37,
 			"team":"fore",			
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -401,7 +401,7 @@
 		"jaques@horsemen":{
 			"name":"Jacques",
 			"lastname":"Verster",
-			"hci":19,
+			"hci":23,
 			"team":"horsemen",			
 			"scorecard":[
 				{"strokes":0, "putts":0},
@@ -429,7 +429,7 @@
 		"ruach@horsemen":{
 			"name":"Ruach",
 			"lastname":"Chenygen",
-			"hci":28,
+			"hci":34,
 			"team":"horsemen",			
 			"scorecard":[
 				{"strokes":0, "putts":0},
