@@ -33,6 +33,6 @@ function checkUser() {
 
 function setUserName(event, form) {
     event.preventDefault();
-    localStorage.setItem("username", $(form).find("input").val());
+    localStorage.setItem("username", $(form).find("input").val().toLowerCase());
     checkUser();
 }
