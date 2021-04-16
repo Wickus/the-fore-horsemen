@@ -46,6 +46,7 @@ class ScoreCard {
         const holes = self.coarseData.holes;
         const scoreCard = self.userInfo.scorecard;
 
+        $(self.element).find("table#front-nine").remove();
         $(self.element).append(`
 			<table id="front-nine">
 				<thead>
@@ -109,6 +110,7 @@ class ScoreCard {
         const holes = self.coarseData.holes;
         const scoreCard = self.userInfo.scorecard;
 
+        $(self.element).find("table#back-nine").remove();
         $(self.element).append(`
 			<table id="back-nine">
 				<thead>
