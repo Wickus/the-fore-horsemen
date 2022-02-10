@@ -1,3 +1,6 @@
+## 1.0.0 (February 10, 2022)
+  - Add VERSION and CHANGELOG.md files, Bump version to v0.1.0.
+
 ## 0.1.0 (February 10, 2022)
   - Add VERSION and CHANGELOG.md files, Bump version to v0.1.0.
   - Added the skins
