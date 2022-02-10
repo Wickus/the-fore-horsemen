@@ -1,0 +1,71 @@
+## 0.1.0 (February 10, 2022)
+  - Added the skins
+  - fixed scoring of 0
+  - Added score to score inputed
+  - Fixed score card UI
+  - Added the groups
+  - Fixed score card
+  - fixed enter score UI
+  - fixed username
+  - Added score card
+  - Fixed leader board
+  - started the score card
+  - Fixed UI
+  - Fixed UI
+  - UX Fix
+  - Created the enter score form
+  - Finished with leader board
+  - FIxed css link
+  - Added the players to the front end
+  - Aded time stamp to files
+  - Fixed navigation
+  - Started the leaderboards
+  - deleted js file
+  - Changed back to normal
+  - changed the index file
+  - changed header file
+  - Added script to header
+  - Changed video attr
+  - Fixed logo
+  - CHanged logo path
+  - Changed video on header
+  - Fixed Galery error
+  - Chnaged Files
+  - Changed File Name
+  - Changed file name
+  - Fixed include file link referances
+  - File Structure
+  - Create README.md
+  - Added live scoring dev
+  - Merge branch 'main' of https://github.com/Wickus/the-fore-horsemen into main
+  - Added Score Card
+  - Added the needed pages
+  - Configure Startup
+  - Changed names of folders for npm
+  - Updated the react website
+  - Changed Name
+  - Completed the gallery and added the PGA and PMG
+  - image updates
+  - Made changes to the gallery
+  - Added footer and added animation to navigation
+  - Merge branch 'main' of https://github.com/Wickus/the-fore-horsemen into main
+  - Added content to the clubhouse
+  - Fixed html & body display
+  - Create golf-ball.svg
+  - Fixed include files
+  - Completed the header component
+  - Added header video to website
+  - Added icons to mobile Nav
+  - Updated directory
+  - Updated gitnore
+  - Added Images for gallery
+  - Added the PHP Website
+  - Renamed Folder from Website to ReactWebsite
+  - Created the react-app / react website .
+  - Added bullet points to make it more readable.
+  - Home Page Description.
+  - Home page description.
+  - Home page description.
+  - Home page description
+  - Initial commit
+
